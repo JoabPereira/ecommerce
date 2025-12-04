@@ -2,13 +2,19 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './componentes/header/header.component';
 import { Card1MainComponent } from './componentes/card1-main/card1-main.component';
+import { CardProdutosComponent } from './componentes/card-produtos/card-produtos.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, Card1MainComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    Card1MainComponent,
+    CardProdutosComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'ecommerce';
