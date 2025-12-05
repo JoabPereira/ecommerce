@@ -1,19 +1,18 @@
 <div
   class="row justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5 px-5"
 >
-  <div class="col d-flex justify-content-center">
+  <div class="col d-flex justify-content-center" *ngFor="let p of products">
     <div class="card h-100">
       <img
         [src]="produtoImg"
         [height]="imgHeight"
-        alt="Produto 1"
+        alt="{{ p.nome }}"
         class="card-img-top"
       />
       <div class="card-body">
-        <a href="#" class="card-title">Card title</a>
+        <a href="#" class="card-title">{{ p.nome }}</a>
         <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
+          {{ p.descricao }}
         </p>
         <button type="button" class="btn btn-primary btn-sm rounded-pill">
           <i class="bi bi-cart4"></i>
@@ -22,68 +21,15 @@
       </div>
 
       <div class="card-footer">
-        <p class="item-footer"><i class="bi bi-currency-dollar"></i>Preço</p>
         <p class="item-footer">
-          <i class="bi bi-ticket-perforated"></i>Desconto
+          Preço:{{ p.preco | currency : "BRL" : "symbol" }}
         </p>
-        <p class="item-footer"><i class="bi bi-archive-fill"></i>Estoque</p>
-      </div>
-    </div>
-  </div>
-  <div class="col d-flex justify-content-center">
-    <div class="card h-100">
-      <img
-        [src]="produtoImg"
-        [height]="imgHeight"
-        alt="Produto 2"
-        class="card-img-top"
-      />
-      <div class="card-body">
-        <a href="#" class="card-title">Card title</a>
-        <p class="card-text">
-          This card has supporting text below as a natural lead-in to additional
-          content.
-        </p>
-        <button type="button" class="btn btn-primary btn-sm rounded-pill">
-          <i class="bi bi-cart4"></i>
-          Carrinho
-        </button>
-      </div>
-      <div class="card-footer">
-        <p class="item-footer"><i class="bi bi-currency-dollar"></i>Preço</p>
         <p class="item-footer">
-          <i class="bi bi-ticket-perforated"></i>Desconto
+          Desconto <i class="bi bi-ticket-perforated"></i>{{ p.desconto }}
         </p>
-        <p class="item-footer"><i class="bi bi-archive-fill"></i>Estoque</p>
-      </div>
-    </div>
-  </div>
-  <div class="col d-flex justify-content-center">
-    <div class="card h-100">
-      <img
-        [src]="produtoImg"
-        [height]="imgHeight"
-        alt="Produto 3"
-        class="card-img-top"
-      />
-      <div class="card-body">
-        <a href="#" class="card-title">Card title</a>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This card has even longer content than the
-          first to show that equal height action.
-        </p>
-        <button type="button" class="btn btn-primary btn-sm rounded-pill">
-          <i class="bi bi-cart4"></i>
-          Carrinho
-        </button>
-      </div>
-      <div class="card-footer">
-        <p class="item-footer"><i class="bi bi-currency-dollar"></i>Preço</p>
         <p class="item-footer">
-          <i class="bi bi-ticket-perforated"></i>Desconto
+          Estoque <i class="bi bi-archive-fill"></i>{{ p.estoque }}
         </p>
-        <p class="item-footer"><i class="bi bi-archive-fill"></i>Estoque</p>
       </div>
     </div>
   </div>
