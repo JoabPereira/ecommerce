@@ -16,7 +16,7 @@
       <td>{{ item.codigoBarras }}</td>
 
       <td>
-        <button (click)="editar.emit(item.id)">Editar</button>
+        <button [routerLink]="['/editar', item.id]">Editar</button>
         <button (click)="deletar.emit(item.id)">Deletar</button>
       </td>
 

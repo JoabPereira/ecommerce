@@ -1,0 +1,47 @@
+<div class="editar-container">
+  <h2>Adicionar novo produto</h2>
+
+  <form [formGroup]="form" (ngSubmit)="criar()" class="form-card">
+    <div class="form-group">
+      <label>Nome:</label>
+      <input formControlName="nome" />
+    </div>
+
+    <div class="form-group">
+      <label>Descrição:</label>
+      <input formControlName="descricao" />
+    </div>
+
+    <div class="form-group">
+      <label>Preço:</label>
+      <input type="number" formControlName="preco" />
+    </div>
+
+    <div class="form-group">
+      <label>Desconto:</label>
+      <input formControlName="desconto" />
+    </div>
+
+    <div class="form-group">
+      <label>Código de Barras:</label>
+      <input formControlName="codigodeBarra" />
+    </div>
+
+    <div class="form-group">
+      <label>Imagem (URL):</label>
+      <input formControlName="imagem" />
+    </div>
+
+    <div class="form-group">
+      <label>Estoque:</label>
+      <input type="number" formControlName="estoque" />
+    </div>
+
+    <div class="form-group">
+      <label>Categoria ID:</label>
+      <input type="number" formControlName="categoria_id" />
+    </div>
+
+    <button type="submit" class="btn-salvar">Adicionar</button>
+  </form>
+</div>
