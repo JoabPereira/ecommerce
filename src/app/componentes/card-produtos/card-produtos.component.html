@@ -1,7 +1,7 @@
 <div
   class="row justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5 px-5"
 >
-  <div class="col d-flex justify-content-center" *ngFor="let p of products">
+  <div class="col d-flex justify-content-center" *ngFor="let p of produtct">
     <div class="card h-100">
       <img
         [src]="produtoImg"
@@ -14,7 +14,11 @@
         <p class="card-text">
           {{ p.descricao }}
         </p>
-        <button type="button" class="btn btn-primary btn-sm rounded-pill">
+        <button
+          type="button"
+          class="btn btn-primary btn-sm rounded-pill"
+          (click)="adicionarCarrinho(p.id)"
+        >
           <i class="bi bi-cart4"></i>
           Carrinho
         </button>
