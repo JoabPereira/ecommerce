@@ -80,7 +80,7 @@ Este é um projeto de Ecommerce desenvolvido com **Angular na sua versão 18**, 
 
   - Tela de Produtos
 
-  ![Tela de Produtos](./src/app/assets/Captura%20de%20tela%202025-12-07%20212600.pngg)
+  ![Tela de Produtos](./src/app/assets/Captura%20de%20tela%202025-12-07%20212600.png)
 
   - Tela de Carrinho de compras
 
