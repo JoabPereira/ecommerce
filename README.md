@@ -72,22 +72,22 @@ Este é um projeto de Ecommerce desenvolvido com **Angular na sua versão 18**, 
 
   ***
 
-  ## 📱 Telas
-
-  - Tela inicial Home
-
-  ![Tela inicial](./src/app/assets/Captura%20de%20tela%202025-12-07%20212349.png)
-
-  - Tela de Produtos
-
-  ![Tela de Produtos](./src/app/assets/Captura%20de%20tela%202025-12-07%20212600.png)
-
-  - Tela de Carrinho de compras
-
-  ![Tela de Produtos](./src/app/assets/Captura%20de%20tela%202025-12-07%20212636.png)
-
-  ***
-
-### Video do projeto funcionando:
+  ### Video do projeto funcionando:
 
 - https://drive.google.com/file/d/1d3xu1Hgvvcrb9KR5RzTbHQzSNXAzqGc4/view?usp=sharing
+
+---
+
+## 📱 Telas
+
+- Tela inicial Home
+
+![Tela inicial](./src/app/assets/Captura%20de%20tela%202025-12-07%20212349.png)
+
+- Tela de Produtos
+
+![Tela de Produtos](./src/app/assets/Captura%20de%20tela%202025-12-07%20212600.png)
+
+- Tela de Carrinho de compras
+
+![Tela de Produtos](./src/app/assets/Captura%20de%20tela%202025-12-07%20212636.png)
