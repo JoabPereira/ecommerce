@@ -1,27 +1,93 @@
-# Ecommerce
+# 🛒 Ecommerce
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.21.
+Este é um projeto de Ecommerce desenvolvido com **Angular na sua versão 18**, utilizando:
 
-## Development server
+- ✅ Standalone Components
+- ✅ Angular SSR (Server‑Side Rendering)
+- ✅ BehaviorSubject para gerenciamento de estado
+- ✅ Carrinho persistido no `localStorage`
+- ✅ Componente de tabela isolado e reutilizável (`product-table`)
+- ✅ Navbar com contador de itens no carrinho
+- ✅ Bootstrap para estilização
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🚀 Tecnologias Utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Angular 18**
+- **TypeScript**
+- **Bootstrap**
+- **RxJS**
+- **SSR (Server‑Side Rendering)**
+- **LocalStorage**
+- **Roteamento moderno**
+- **HttpClient para integração com backend**
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 📦 Funcionalidades
 
-## Running unit tests
+### ✅ Gerenciamento de Produtos
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Listagem de produtos
+- Edição
+- Exclusão
+- Adição ao carrinho
 
-## Running end-to-end tests
+### ✅ Carrinho de Compras
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Adicionar itens
+- Remover itens
+- Limpar carrinho
+- Quantidade total calculada automaticamente
+- Persistência via `localStorage`
+- Compatível com SSR usando `isPlatformBrowser`
 
-## Further help
+### ✅ Navbar com Contador
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Mostra quantidade total de itens no carrinho
+- Atualiza em tempo real usando RxJS
+
+### ✅ Componente Reutilizável: `product-table`
+
+- Recebe produtos via `@Input`
+- Emite eventos via `output()`
+- Pode ser usado em qualquer página sem duplicar código
+
+---
+
+## 🛠️ Instalação
+
+- #### Passos para instalação do Front-End
+
+  git clone https://github.com/JoabPereira/ecommerce
+
+  npm install
+
+  ng serve
+
+  - #### Passos para clonar o Back-End Java do projeto
+
+  git clone https://github.com/JoabPereira/backend-ecommerce
+
+  ***
+
+  ## 📱 Telas
+
+  - Tela inicial Home
+
+  ![Tela inicial](./src/app/assets/Captura%20de%20tela%202025-12-07%20212349.png)
+
+  - Tela de Produtos
+
+  ![Tela de Produtos](./src/app/assets/Captura%20de%20tela%202025-12-07%20212600.pngg)
+
+  - Tela de Carrinho de compras
+
+  ![Tela de Produtos](./src/app/assets/Captura%20de%20tela%202025-12-07%20212636.png)
+
+  ***
+
+### Video do projeto funcionando:
+
+- https://drive.google.com/file/d/1d3xu1Hgvvcrb9KR5RzTbHQzSNXAzqGc4/view?usp=sharing
