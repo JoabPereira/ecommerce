@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, output, OnInit } from '@angular/core';
-import { EventEmitter } from 'stream';
 import { Produto } from '../../../models/produto.model';
 import { RouterModule } from '@angular/router';
 
@@ -23,7 +22,7 @@ export class ProductTableComponent {
 
   editar = output<number>();
   deletar = output<number>();
-  adicionarCarrinho = output<number>();
+  adicionarCarrinho = output<Produto>();
 
   formatarPreco(valor: number) {
     return valor.toLocaleString('pt-BR', {
@@ -40,7 +39,7 @@ export class ProductTableComponent {
     this.deletar.emit(id);
   }
 
-  onAdicionarCarrinho(id: number) {
-    this.adicionarCarrinho.emit(id);
+  onAdicionarCarrinho(produto: Produto) {
+    this.adicionarCarrinho.emit(produto);
   }
 }

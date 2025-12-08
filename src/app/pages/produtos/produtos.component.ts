@@ -5,6 +5,7 @@ import { ProductService } from '../../services/product-service/product.service';
 import { Produto } from '../../models/produto.model';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
+import { CartServiceService } from '../../services/cart-service.service';
 
 @Component({
   selector: 'app-produtos',
@@ -16,7 +17,11 @@ import { Router } from '@angular/router';
 export class ProdutosComponent implements OnInit {
   produtos: Produto[] = [];
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(
+    private productService: ProductService,
+    private router: Router,
+    private cartService: CartServiceService
+  ) {}
 
   ngOnInit() {
     this.carregarProdutos();
@@ -48,7 +53,8 @@ export class ProdutosComponent implements OnInit {
     });
   }
 
-  adicionarCarrinho(id: number) {
-    console.log('Carrinho', id);
+  adicionarCarrinho(produto: Produto) {
+    console.log('Adicionar ao carrinho', produto);
+    this.cartService.adicionar(produto);
   }
 }

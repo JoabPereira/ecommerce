@@ -1,28 +1,45 @@
-<table class="table table-striped table-hover w-100">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Preço</th>
-      <th>Cód. Barras</th>
-      <th>Ações</th>
-      <th>Carrinho</th>
-    </tr>
-  </thead>
+<div class="container-carrinho">
+  <h2>Lista de Produtos</h2>
 
-  <tbody>
-    <tr *ngFor="let item of produtos">
-      <td>{{ item.nome }}</td>
-      <td>{{ formatarPreco(item.preco) }}</td>
-      <td>{{ item.codigoBarras }}</td>
+  <table class="table table-striped table-hover w-100">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Cód. Barras</th>
+        <th>Ações</th>
+        <th>Carrinho</th>
+      </tr>
+    </thead>
 
-      <td>
-        <button [routerLink]="['/editar', item.id]">Editar</button>
-        <button (click)="deletar.emit(item.id)">Deletar</button>
-      </td>
+    <tbody>
+      <tr *ngFor="let item of produtos">
+        <td>{{ item.nome }}</td>
+        <td>{{ formatarPreco(item.preco) }}</td>
+        <td>{{ item.codigoBarras }}</td>
 
-      <td>
-        <button (click)="adicionarCarrinho.emit(item.id)">🛒</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            [routerLink]="['/editar', item.id]"
+          >
+            Editar
+          </button>
+
+          <button class="btn btn-danger btn-sm" (click)="deletar.emit(item.id)">
+            Deletar
+          </button>
+        </td>
+
+        <td>
+          <button
+            class="btn btn-success btn-sm"
+            (click)="adicionarCarrinho.emit(item)"
+          >
+            🛒
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
